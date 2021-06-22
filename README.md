@@ -111,18 +111,18 @@
 ### 3.2 软件平台
 
 
-|     软件      |                   版本                    |                     作用                      |
+|     软件   	|   	            版本                 	|                     作用                   	|
 | :-----------: | :---------------------------------------: | :-------------------------------------------: |
-|     Java      | Oracle JDK 1.8.0.-261 / Oracle JDK 11.0.9 |              所有框架的底层服务               |
-|     Scala     |                  2.11.12                  |      本项目主要是Flink的Scala API来实现       |
-|     Flink     |            Apache Flink 1.11.2            |                数据清洗和计算                 |
-|     Kafka     |            Apache Kafka 2.4.1             |                   数据通道                    |
-|     Redis     |                   5.0.10                   |               提供快速读取服务                |
-|   Zookeeper   |               Apache 3.6.3                |                 管理Kafka集群                 |
-|    Hadoop     |            Apache Hadoop 3.1.3            |                提供分布式存储                 |
-|     MySQL     |                  5.7.30                   |                 提供数据存储                  |
-| Elasticsearch |                   7.8.0                   | 提供快速分布式查询服务，使用Oracle JDK 11.0.9 |
-|    Kibana     |                   7.8.0                   |     提供数据可视化，使用Oracle JDK 11.0.9     |
+|     Java      |           Oracle JDK 1.8.0.-261	     	|              所有框架的底层服务              	|
+|     Scala     |                  2.11.12                  |      本项目主要是Flink的Scala API来实现       	|
+|     Flink     |            Apache Flink 1.11.2            |                数据清洗和计算                 	|
+|     Kafka     |            Apache Kafka 2.4.1             |                   数据通道                    	|
+|     Redis     |                   5.0.10                  |               提供快速读取服务                	|
+|   Zookeeper   |               Apache 3.6.3                |                 管理Kafka集群                 	|
+|    Hadoop     |            Apache Hadoop 3.1.3            |                提供分布式存储                 	|
+|     MySQL     |                  5.7.30                   |                 提供数据存储                  	|
+| Elasticsearch |                   7.8.0                   |            	提供快速分布式查询服务			 	|
+|    Kibana     |                   7.8.0                   |    			 提供数据可视化					|
 
 
 
@@ -575,23 +575,7 @@ class IncreWarning(interval: Long) extends KeyedProcessFunction[K, I, O] {
 对于其他一些复杂的场景可以通过Flink  Complex Event Processing (CEP) 来实现，如连续多次满足预定条件的计算情况， 具体来说连续 5 次价格大于 10000 美元就报警，可以使用 CEP 轻松实现。
 
 
-
-## 11 价格预测
-
-![下载](image/BitcoinPricePredicted.png)
-
-图中红线为截至2021年6月 Bitcoin 月平均价格的预测结果，可以看出在整体价格趋势的预测基本正确，只是没能预测其在2020年底Bitcoin的价格能够接近30000美元大关。
-
-![image-20210102032943404](image/image-20210102032943404.png)
-
-受到各种因素，尤其是新冠疫情的持续恶化的消极情绪影响 2020 年 12 月 Bitcoin 价格走势近乎疯狂，其价格能从 12月1日18770.7美元的收盘价一路上涨到31日收盘价已经达到28949.4美元，一月内涨幅超过 50%，这让价格的预测变得及其困难，但是模型也基本预测出了年底的这一波快速上涨。
-
-**持续疯涨**
-
-继2021年1月2日突破3万美元关口之后，1月3日比特币价格一度突破3.4万美元。Coindesk数据显示，截至1月3日15点44分，比特币报34366.15美元的新纪录。Coingecko行情显示，比特币总市值突破7000亿美元（约合45265亿人民币），全部加密货币市场的总市值首次突破1万亿美元。
-比特币从1.5万美元上涨至2万美元花了大约40天时间，从2万美元涨至2.5万美元大约花了10天时间，从2.5万美元到3万美元花了大约8天时间，而从3万美元到3.5万美元，只花了5天时间......
-
-## 12 相关引用
+## 11 相关引用
 
 [^1]:https://en.wikipedia.org/wiki/Bitcoin
 [^2]:https://bitcoin.org/bitcoin.pdf
@@ -605,24 +589,7 @@ class IncreWarning(interval: Long) extends KeyedProcessFunction[K, I, O] {
 
 
 ## TODO🔔🔔🔔:
-- [x] 将数据写入Redis，丰富数据源的格式，兼容更多的实现方案
-- [x] 推送 kafka，使用队列传输数据
-- [x] 存入 Elasticsearch，使用全文检索实现实时搜索，kibana 可视化展示
-- [x] 使用 Flink 扩展拆分时间字段，实现一小时、一天、一周以及一月的价格和交易量走势可视化
-- [x] Flink 流式实时分析价格、交易量及交易额走势
-- [x] 使用 LSTM 和 ARIMA 实现价格走势预测
-- [ ] 使用 Flink 实现更丰富的实时计算
-- [ ] 通过数据分析构建一套投资策略
+- [ ] ...
 
 
 
-## 更新日志
-
-- v0.1 第一个版本
-	- 使用 Flink 完成数据清洗
-	- 使用 Kafka 消息队列传输数据
-	- 存入 Elasticsearch，使用全文检索实现实时搜索，kibana 可视化展示
-	- 使用 Flink 扩展拆分时间字段，实现一小时、一天、一周以及一月的价格和交易量走势可视化
-	- 使用 Flink 流式实时分析价格、交易量及交易额走势
-- v0.2 
-	- 使用传统统计方法价格预测雏形完成，还需要继续优化

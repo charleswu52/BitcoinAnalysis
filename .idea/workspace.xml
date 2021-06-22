@@ -4,26 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce88a18c-8f5f-4b20-9662-4c6d3e774558" name="Default Changelist" comment="add">
-      <change afterPath="$PROJECT_DIR$/image/BitcoinPricePredicted.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/image-20201223005528577.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/image-20201223140343138.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/image-20201223181413577.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/image-20201223183859368.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/image-20201224234114343.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/image-20201225002948702.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/image-20201225003207664.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/image-20201225003413437.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/image-20201225005709325.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/image-20201225005903614.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/image-20201225012713471.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/image-20201231235736331.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/image-20210101001748405.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/image-20210101001859177.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/image-20210101004954249.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/image-20210101005435254.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/image-20210102032943404.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/logo.png" afterDir="false" />
+    <list default="true" id="ce88a18c-8f5f-4b20-9662-4c6d3e774558" name="Default Changelist" comment="update README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,19 +52,6 @@
       <recent name="E:\WorkSpace\InterviewProject\source\BitcoinAnalysis" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -90,7 +60,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624335967522</updated>
-      <workItem from="1624335970934" duration="689000" />
+      <workItem from="1624335970934" duration="983000" />
+      <workItem from="1624343334694" duration="332000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1624336325383</created>
@@ -99,7 +70,21 @@
       <option name="project" value="LOCAL" />
       <updated>1624336325383</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add photo">
+      <created>1624336693098</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1624336693098</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update README.md">
+      <created>1624336868477</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1624336868477</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,10 +100,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add" />
-    <option name="LAST_COMMIT_MESSAGE" value="add" />
+    <MESSAGE value="add photo" />
+    <MESSAGE value="update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="update README.md" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
