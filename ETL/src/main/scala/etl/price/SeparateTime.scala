@@ -8,9 +8,14 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 
 /**
- * @author ngt
+ * @author WuChao
  * @create 2020-12-22 21:21
  */
+
+/**
+ * 分割日期格式
+ */
+
 // 时间戳， 平均价格， 最低价格， 最高价格
 // 年 月 日 时 分 星期
 case class SeparateTimeBitcoin(timestamp: Long, currencyBTC: Double, currencyMony: Double, weightedPrice: Double,
@@ -22,7 +27,8 @@ object SeparateTime {
     env.setParallelism(1)
     env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)
 
-    val inputStream = env.readTextFile("data/bitcoin.csv")
+    val url = DayPrice.getClass.getResource("/data/bitcoin.csv")
+    val inputStream = env.readTextFile(url.getPath)
 
     val dataStream: DataStream[SeparateTimeBitcoin] = inputStream
       .map(data => {

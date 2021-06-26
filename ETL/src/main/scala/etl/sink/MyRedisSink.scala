@@ -5,14 +5,17 @@ import org.apache.flink.streaming.connectors.redis.common.mapper.{RedisCommand, 
 
 
 /**
- * @author ngt
+ * @author WuChao
  * @create 2020-12-21 1:13
  */
 
+/**
+ * 向 Redis 写入数据
+ */
 case class RedisUtilsBitcoin(timestamp: String, weightedPrice: Double)
 
 class MyRedisSink {
-  // host 改成localhost
+  // 建立连接
   val jedis = new FlinkJedisPoolConfig.Builder().setHost("127.0.0.1").setPort(6379).build()
 
   case class MyRedisSinkFun() extends RedisMapper[RedisUtilsBitcoin] {

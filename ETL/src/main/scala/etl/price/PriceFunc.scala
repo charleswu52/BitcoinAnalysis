@@ -5,8 +5,12 @@ import org.apache.flink.streaming.api.windowing.windows.TimeWindow
 import org.apache.flink.util.Collector
 
 /**
- * @author ngt
+ * @author WuChao
  * @create 2020-12-21 1:08
+ */
+
+/**
+ * 计算 平均价格， 最低价格， 最高价格
  */
 
 // 时间戳， 平均价格， 最低价格， 最高价格

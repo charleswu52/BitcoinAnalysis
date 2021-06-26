@@ -17,8 +17,13 @@ import java.util.Properties
 
 /**
  * @author WuChao
- * @create 2021/6/17 13:44
- * 数据清洗，去除原始文件中的无效数据，保存到本地
+ * @create 2020-12-18 13:44
+ *
+ */
+
+/**
+ * 数据清洗
+ * 从 Kafka 中读取数据 并写入 文件
  */
 
 // 时间戳(秒)，开盘价格，最高价，最低价，收盘价， 交易量， 交易价值(美元)， 权重交易价格
@@ -41,7 +46,8 @@ object DataCleansingToCSV {
 
     // 创建 Kafka consumer
     // 使用通配符 同时匹配多个 Kafka主题
-    val consumer = new FlinkKafkaConsumer[String](java.util.regex.Pattern.compile("bitcoin-source[0-9]"), new SimpleStringSchema(), properties)
+    val consumer = new FlinkKafkaConsumer[String](
+      java.util.regex.Pattern.compile("bitcoin-source[0-9]"), new SimpleStringSchema(), properties)
     // 从 topic的开始读取数据，实际生产过程中 设置 从 offset读取或者 读取实时产生的
     consumer.setStartFromEarliest()
     val inputStream: DataStream[String] = env.addSource(consumer)
@@ -56,30 +62,23 @@ object DataCleansingToCSV {
         File2CSV_Bitcoin(arr(0).toLong * 1000L, arr(1), arr(2), arr(3), arr(4), arr(5), arr(6), arr(7))
       })
 
-    val dataStreamWithTime = dataStream.assignTimestampsAndWatermarks(new BoundedOutOfOrdernessTimestampExtractor[File2CSV_Bitcoin](Time.milliseconds(1000)) {
+    val dataStreamWithTime = dataStream.assignTimestampsAndWatermarks(
+      new BoundedOutOfOrdernessTimestampExtractor[File2CSV_Bitcoin](Time.milliseconds(1000)) {
       override def extractTimestamp(element: File2CSV_Bitcoin): Long = element.timestamp
     })
 
-//    dataStream.timeWindowAll(Time.seconds(5)).apply()
 
-
-
-    val filePath = "E:\\WorkSpace\\InterviewProject\\source\\BitcoinAnalysis\\ETL\\data\\bitcoin2.csv"  //测试
+    val filePath = "E:\\WorkSpace\\InterviewProject\\source\\BitcoinAnalysis\\ETL\\data\\bitcoin2.csv"
     val file = new File(filePath)
     if (file.exists()) {
       file.delete()
     }
 
-    // 弃用的方法
-//    dataStream.writeAsCsv(filePath)
-    // 重新参考的方法 也不牢靠
-//    dataStream.addSink(StreamingFileSink.forRowFormat(new Path(filePath),new SimpleStringEncoder[File2CSV_Bitcoin]()).build())
-
-
+    dataStream.writeAsCsv(filePath)
 
     dataStream.print("Filtered bitcoin")
 
-    env.execute("DataCleansingToCSV")
+    env.execute("kafka to csv job")
   }
 
   case class MyCSVSink() extends RichSinkFunction[File2CSV_Bitcoin]{

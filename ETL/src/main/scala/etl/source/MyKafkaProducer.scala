@@ -3,11 +3,17 @@ package etl.source
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
 
 import java.util.Properties
+import java.util.concurrent.TimeUnit
 import scala.io.BufferedSource
 
 /**
  * @author WuChao
- * @create 2021/6/17 13:42
+ * @create 2020-12-20 13:42
+ */
+
+/**
+ * 数据源
+ * 向Kafka 写入数据
  */
 object MyKafkaProducer {
 
@@ -22,15 +28,17 @@ object MyKafkaProducer {
     properties.setProperty("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
     properties.setProperty("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
 
-
     val producer: KafkaProducer[String, String] = new KafkaProducer[String, String](properties)
-    //    val source: BufferedSource = io.Source.fromFile("data/bitcoin.csv")
-    val source: BufferedSource = io.Source.fromFile("E:\\WorkSpace\\InterviewProject\\source\\BitcoinAnalysis\\ETL\\data\\bitstampUSD.csv")
+
+
+    val url = MyKafkaProducer.getClass.getResource("/data/bitstampUSD.csv")
+    val source: BufferedSource = io.Source.fromFile(url.getPath)
 
     for (line <- source.getLines()) {
       val record: ProducerRecord[String, String] = new ProducerRecord[String, String](topic, line)
       producer.send(record)
-      //      TimeUnit.MILLISECONDS.sleep(10)
+      // 模拟写入延迟
+            TimeUnit.MILLISECONDS.sleep(1000)
     }
     producer.close()
   }

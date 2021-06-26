@@ -6,9 +6,13 @@ import java.io.File
 import java.text.SimpleDateFormat
 
 /**
- * @author ngt
+ * @author WuChao
  * @create 2020-12-20 20:30
  *         统计每分钟的交易价格
+ */
+
+/**
+ * 计算 bitcoin 每分钟价格
  */
 
 // 时间戳 交易价格
@@ -19,12 +23,16 @@ object MinutePrice {
     val env = StreamExecutionEnvironment.getExecutionEnvironment
     env.setParallelism(1)
 
-    val inputStream = env.readTextFile("data/bitcoin.csv")
+    val url = DayPrice.getClass.getResource("/data/bitcoin.csv")
+    val inputStream = env.readTextFile(url.getPath)
 
     val dataStream: DataStream[MinutePrice_Bitcoin] = inputStream
       .map(data => {
         val arr: Array[String] = data.split(",")
-        MinutePrice_Bitcoin(new SimpleDateFormat("yyyy-MM-dd HH:mm").format(arr(0).toLong * 1000L), (arr(7).toDouble * 10000).toInt / 10000.0)
+        MinutePrice_Bitcoin(
+          new SimpleDateFormat(
+            "yyyy-MM-dd HH:mm").format(arr(0).toLong * 1000L),
+          (arr(7).toDouble * 10000).toInt / 10000.0)
       })
 
     val filePath = "data_time/MinutePrice.csv"

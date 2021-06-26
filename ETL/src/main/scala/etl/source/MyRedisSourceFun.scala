@@ -8,7 +8,11 @@ import java.util
 
 /**
  * @author WuChao
- * @create 2021/6/17 13:43
+ * @create 2020-12-20 13:43
+ */
+
+/**
+ *从Redis中消费数据
  */
 case class MyRedisSourceFun()extends RichSourceFunction[String] {
 

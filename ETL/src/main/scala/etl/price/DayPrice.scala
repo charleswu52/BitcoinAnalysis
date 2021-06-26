@@ -8,12 +8,15 @@ import java.io.File
 import java.text.SimpleDateFormat
 
 /**
- * @author ngt
+ * @author WuChao
  * @create 2020-12-20 21:00
  */
 
-case class DayPrice_Bitcoin(timestamp: Long, weightedPrice: Double)
+/**
+ * 计算 bitcoin 每日价格
+ */
 
+case class DayPrice_Bitcoin(timestamp: Long, weightedPrice: Double)
 
 object DayPrice {
   def main(args: Array[String]): Unit = {
@@ -22,7 +25,8 @@ object DayPrice {
     env.setParallelism(1)
     env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)
 
-    val inputStream = env.readTextFile("data/bitcoin.csv")
+    val url = DayPrice.getClass.getResource("/data/bitcoin.csv")
+    val inputStream = env.readTextFile(url.getPath)
 
     // 表示整点时间
     var theHour: Long = 0L
@@ -44,7 +48,7 @@ object DayPrice {
         (new SimpleDateFormat("yyyy-MM-dd").format(data.timestamp), data.avgPrice, data.minPrice, data.maxPrice)
       })
 
-    val filePath = "data_time/DayPrice.csv"
+    val filePath = DayPrice.getClass.getResource("/data_time/DayPrice.csv").getPath
     val file = new File(filePath)
     if (file.exists()) {
       file.delete()

@@ -14,7 +14,12 @@ import java.util.Properties
 
 /**
  * @author WuChao
- * @create 2021/6/17 13:50
+ * @create 2020-12-18 13:50
+ */
+
+/**
+ * 数据清洗
+ * 从 Kafka 中读取数据 并写入 Redis
  */
 
 // 时间戳(秒)，开盘价格，最高价，最低价，收盘价， 交易量， 交易价值(美元)， 权重交易价格
@@ -33,7 +38,8 @@ object KafkaToRedis {
 
     // 使用通配符 同时匹配多个Kafka主题
     val inputStream: DataStream[String] =
-      env.addSource(new FlinkKafkaConsumer011[String](java.util.regex.Pattern.compile("bitcoin-source[0-9]"), new SimpleStringSchema(), properties))
+      env.addSource(new FlinkKafkaConsumer011[String](
+        java.util.regex.Pattern.compile("bitcoin-source[0-9]"), new SimpleStringSchema(), properties))
 
     val dataStream: DataStream[CSVToRedis_Bitcoin] = inputStream
       .filter(data => {
@@ -57,9 +63,9 @@ object KafkaToRedis {
   }
 }
 
-class PriceFunc extends ProcessAllWindowFunction[CSVToRedis_Bitcoin,CSVToRedis_Bitcoin,TimeWindow]{
+class PriceFunc extends ProcessAllWindowFunction[CSVToRedis_Bitcoin, CSVToRedis_Bitcoin, TimeWindow] {
   override def process(context: Context, elements: Iterable[CSVToRedis_Bitcoin], out: Collector[CSVToRedis_Bitcoin]): Unit = {
-    for(i <- elements){
+    for (i <- elements) {
       out.collect(i)
     }
   }
@@ -93,14 +99,3 @@ case class MyRedisSinkFun() extends RedisMapper[CSVToRedis_Bitcoin] {
 }
 
 
-/*
-    Redis  集群配置
-    val nodes: util.HashSet[InetSocketAddress] = new util.HashSet()
-    nodes.add(new InetSocketAddress("127.0.0.1", 7001))
-    nodes.add(new InetSocketAddress("127.0.0.1", 7002))
-    nodes.add(new InetSocketAddress("127.0.0.1", 7003))
-    nodes.add(new InetSocketAddress("127.0.0.1", 7004))
-    nodes.add(new InetSocketAddress("127.0.0.1", 7005))
-    nodes.add(new InetSocketAddress("127.0.0.1", 7006))
-val jedisCluster: FlinkJedisClusterConfig = new FlinkJedisClusterConfig.Builder().setNodes(nodes).build()
- */

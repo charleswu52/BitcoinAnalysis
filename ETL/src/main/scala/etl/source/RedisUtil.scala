@@ -6,7 +6,12 @@ import java.util
 
 /**
  * @author WuChao
- * @create 2021/6/17 13:44
+ * @create 2020-12-20 13:44
+ */
+
+/**
+ * Redis 工具类
+ * 获取连接
  */
 object RedisUtil {
   // JedisPool资源池优化 - 最佳实践| 阿里云 https://www.alibabacloud.com/help/zh/doc-detail/98726.htm

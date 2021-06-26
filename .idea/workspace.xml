@@ -5,8 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce88a18c-8f5f-4b20-9662-4c6d3e774558" name="Default Changelist" comment="update README.md">
+      <change afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/test/DataCleansing.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/test/RedisToKafka.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/test/TestKafka.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ETL/ETL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/ETL.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/DayPrice.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/DayPrice.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/HourPrice.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/HourPrice.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/MinutePrice.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/MinutePrice.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/PriceFunc.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/PriceFunc.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/SeparateTime.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/SeparateTime.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/TimePriceToElasticsearch.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/TimePriceToElasticsearch.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/raw/KafkaToCSV.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/raw/KafkaToCSV.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/raw/KafkaToES.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/raw/KafkaToES.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/raw/KafkaToRedis.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/raw/KafkaToRedis.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/sink/MyElasticsearchSink.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/sink/MyElasticsearchSink.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/sink/MyJDBCSink.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/sink/MyJDBCSink.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/sink/MyRedisSink.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/sink/MyRedisSink.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/source/MyKafkaProducer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/source/MyKafkaProducer.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/source/MyRedisSourceFun.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/source/MyRedisSourceFun.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/source/RedisUtil.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/source/RedisUtil.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +36,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -43,14 +69,32 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ETL/src/main/scala/etl/test" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\WorkSpace\InterviewProject\source\BitcoinAnalysis\ETL\src\main\scala\etl\test" />
       <recent name="E:\WorkSpace\InterviewProject\source\BitcoinAnalysis" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\WorkSpace\InterviewProject\source\BitcoinAnalysis\ETL\src\main\resources\data" />
+      <recent name="E:\WorkSpace\InterviewProject\source\BitcoinAnalysis\ETL\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -61,7 +105,8 @@
       <option name="presentableId" value="Default" />
       <updated>1624335967522</updated>
       <workItem from="1624335970934" duration="983000" />
-      <workItem from="1624343334694" duration="332000" />
+      <workItem from="1624343334694" duration="861000" />
+      <workItem from="1624702665000" duration="5006000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1624336325383</created>
@@ -84,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624336868477</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update README.md">
+      <created>1624343675504</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1624343675504</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

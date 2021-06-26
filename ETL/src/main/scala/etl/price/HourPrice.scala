@@ -8,8 +8,12 @@ import java.io.File
 import java.text.SimpleDateFormat
 
 /**
- * @author ngt
+ * @author WuChao
  * @create 2020-12-20 20:59
+ */
+
+/**
+ * 计算 bitcoin 每小时价格
  */
 
 case class HourPrice_Bitcoin(timestamp: Long, weightedPrice: Double)
@@ -24,7 +28,9 @@ object HourPrice {
     env.setParallelism(1)
     env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)
 
-    val inputStream = env.readTextFile("data/bitcoin.csv")
+
+    val url = DayPrice.getClass.getResource("/data/bitcoin.csv")
+    val inputStream = env.readTextFile(url.getPath)
 
     // 表示整点时间
     var theHour: Long = 0L

@@ -8,8 +8,12 @@ import org.elasticsearch.client.Requests
 import java.util
 
 /**
- * @author ngt
+ * @author WuChao
  * @create 2020-12-20 21:04
+ */
+
+/**
+ * 向 ElasticSearch中写入数据
  */
 case class ElasticsearchBitcion(timestamp: String, avgPrice: String, minPrice: String, maxPrice: String)
 
@@ -22,6 +26,7 @@ class MyElasticsearchSink {
   //  httpHosts.add(new HttpHost("192.168.100.102", 9200, "http"))
   //  httpHosts.add(new HttpHost("192.168.100.103", 9200, "http"))
   //  httpHosts.add(new HttpHost("192.168.100.104", 9200, "http"))
+  // 本地ES
   httpHosts.add(new HttpHost("127.0.0.1", 9200, "http"))
 
   val esSinkFunc = new ElasticsearchSinkFunction[ElasticsearchBitcion] {
@@ -29,17 +34,17 @@ class MyElasticsearchSink {
       // 包装写入es的数据
       val dataSource = new util.HashMap[String, String]()
 
-      // 分钟价格
+      // 每分钟价格
       //      dataSource.put("Time_Minute", element.timestamp)
       //      dataSource.put("Price_Minute", element.weightedPrice)
 
       // 每天价格
-//      dataSource.put("Time_Day", element.timestamp)
-//      dataSource.put("avgPrice_Day", element.avgPrice)
-//      dataSource.put("minPrice_Day", element.minPrice)
-//      dataSource.put("maxPrice_Day", element.maxPrice)
+      //      dataSource.put("Time_Day", element.timestamp)
+      //      dataSource.put("avgPrice_Day", element.avgPrice)
+      //      dataSource.put("minPrice_Day", element.minPrice)
+      //      dataSource.put("maxPrice_Day", element.maxPrice)
 
-      // 每天价格
+      // 每小时价格
       dataSource.put("Time_Hour", element.timestamp)
       dataSource.put("avgPrice_Hour", element.avgPrice)
       dataSource.put("minPrice_Hour", element.minPrice)

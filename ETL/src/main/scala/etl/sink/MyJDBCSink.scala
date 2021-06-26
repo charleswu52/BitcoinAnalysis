@@ -7,8 +7,12 @@ import java.sql.{Connection, Date, DriverManager, PreparedStatement}
 
 
 /**
- * @author ngt
+ * @author WuChao
  * @create 2020-12-21 1:45
+ */
+
+/**
+ * 向 MySQL 中写入数据
  */
 case class JDBCBitcion(timestamp: Date, weightedPrice: Double)
 

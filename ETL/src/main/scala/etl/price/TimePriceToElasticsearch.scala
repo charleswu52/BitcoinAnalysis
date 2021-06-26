@@ -5,8 +5,12 @@ import org.apache.flink.streaming.api.scala.{StreamExecutionEnvironment, _}
 import org.apache.flink.streaming.connectors.elasticsearch7.ElasticsearchSink
 
 /**
- * @author ngt
+ * @author WuChao
  * @create 2020-12-21 2:29
+ */
+
+/**
+ * 把 每日价格 每小时价格 每分钟价格 都写入ES
  */
 
 object TimePriceToElasticsearch {
