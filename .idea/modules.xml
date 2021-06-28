@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BitcoinAnalysis.iml" filepath="$PROJECT_DIR$/BitcoinAnalysis.iml" />
       <module fileurl="file://$PROJECT_DIR$/ETL/ETL.iml" filepath="$PROJECT_DIR$/ETL/ETL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RealtimeAnalysis/RealtimeAnalysis.iml" filepath="$PROJECT_DIR$/RealtimeAnalysis/RealtimeAnalysis.iml" />
     </modules>
   </component>
 </project>

@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ETL" />
+        <module name="RealtimeAnalysis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="BitcoinAnalysis" target="8" />
       <module name="ETL" target="8" />
+      <module name="RealtimeAnalysis" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -4,27 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce88a18c-8f5f-4b20-9662-4c6d3e774558" name="Default Changelist" comment="update README.md">
-      <change afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/test/DataCleansing.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/test/RedisToKafka.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/test/TestKafka.scala" afterDir="false" />
+    <list default="true" id="ce88a18c-8f5f-4b20-9662-4c6d3e774558" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_cep_2_11_1_11_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_cep_scala_2_11_1_11_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RealtimeAnalysis/RealtimeAnalysis.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RealtimeAnalysis/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RealtimeAnalysis/src/main/scala/cep/ValueCEP.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RealtimeAnalysis/src/main/scala/continuous/PriceIncrease.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RealtimeAnalysis/src/main/scala/time_statists/MinMaxPrice.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RealtimeAnalysis/src/main/scala/time_statists/MinMaxPriceFunc.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ETL/ETL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/ETL.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/DayPrice.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/DayPrice.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/HourPrice.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/HourPrice.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/MinutePrice.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/MinutePrice.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/PriceFunc.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/PriceFunc.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/SeparateTime.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/SeparateTime.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/TimePriceToElasticsearch.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/price/TimePriceToElasticsearch.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/raw/KafkaToCSV.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/raw/KafkaToCSV.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/raw/KafkaToES.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/raw/KafkaToES.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/raw/KafkaToRedis.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/raw/KafkaToRedis.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/sink/MyElasticsearchSink.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/sink/MyElasticsearchSink.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/sink/MyJDBCSink.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/sink/MyJDBCSink.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/sink/MyRedisSink.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/sink/MyRedisSink.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/source/MyKafkaProducer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/source/MyKafkaProducer.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/source/MyRedisSourceFun.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/source/MyRedisSourceFun.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETL/src/main/scala/etl/source/RedisUtil.scala" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/src/main/scala/etl/source/RedisUtil.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,12 +63,18 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ETL/src/main/scala/etl/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/RealtimeAnalysis/src/main/scala/time_statists" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.43103448" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\WorkSpace\InterviewProject\source\BitcoinAnalysis\RealtimeAnalysis\src\main\scala\time_statists" />
+      <recent name="E:\WorkSpace\InterviewProject\source\BitcoinAnalysis\RealtimeAnalysis\src\main\scala\continuous" />
+      <recent name="E:\WorkSpace\InterviewProject\source\BitcoinAnalysis\RealtimeAnalysis\src\main\scala\cep" />
       <recent name="E:\WorkSpace\InterviewProject\source\BitcoinAnalysis\ETL\src\main\scala\etl\test" />
       <recent name="E:\WorkSpace\InterviewProject\source\BitcoinAnalysis" />
     </key>
@@ -106,7 +106,9 @@
       <updated>1624335967522</updated>
       <workItem from="1624335970934" duration="983000" />
       <workItem from="1624343334694" duration="861000" />
-      <workItem from="1624702665000" duration="5006000" />
+      <workItem from="1624702665000" duration="5050000" />
+      <workItem from="1624752915317" duration="607000" />
+      <workItem from="1624780665410" duration="2285000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1624336325383</created>
@@ -136,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624343675504</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update ETL Module">
+      <created>1624718850284</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1624718850284</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +167,8 @@
     <MESSAGE value="add" />
     <MESSAGE value="add photo" />
     <MESSAGE value="update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="update README.md" />
+    <MESSAGE value="update ETL Module" />
+    <option name="LAST_COMMIT_MESSAGE" value="update ETL Module" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
