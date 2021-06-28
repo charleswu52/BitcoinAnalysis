@@ -487,11 +487,11 @@ POST _reindex
 
 ## 10 实时分析
 
-#### 10.1 阈值报警
+### 10.1 阈值报警
 
 当价格、交易量和交易金额中的一个或多个达到阈值就触发报警。
 
-#### 10.2 变化报警
+### 10.2 变化报警
 
 当价格、交易量和交易金额中的一个或多个相对于之前的一个或多个状态的变化量超过阈值就触发报警。
 
@@ -514,7 +514,7 @@ class priceChangAlert(threshold: Double) extends RichFlatMapFunction[in, out] {
 }
 ```
 
-#### 10.3 连续上涨预警
+### 10.3 连续上涨预警
 
 使用 Flink 可以实现对 Bitcoin 价格的实时检测，并进行有状态的计算，使用 KeyedProcessFunction 实现价格在 10 分钟内连续上涨或连续 10 分钟下跌的时候就能触发报警的简要代码：
 
@@ -570,7 +570,7 @@ class IncreWarning(interval: Long) extends KeyedProcessFunction[K, I, O] {
 }
 ```
 
-#### 10.4 CEP
+### 10.4 CEP
 
 对于其他一些复杂的场景可以通过Flink  Complex Event Processing (CEP) 来实现，如连续多次满足预定条件的计算情况， 具体来说连续 5 次价格大于 10000 美元就报警，可以使用 CEP 轻松实现。
 

@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce88a18c-8f5f-4b20-9662-4c6d3e774558" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_cep_2_11_1_11_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_flink_flink_cep_scala_2_11_1_11_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealtimeAnalysis/RealtimeAnalysis.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealtimeAnalysis/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealtimeAnalysis/src/main/scala/cep/ValueCEP.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealtimeAnalysis/src/main/scala/continuous/PriceIncrease.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealtimeAnalysis/src/main/scala/time_statists/MinMaxPrice.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RealtimeAnalysis/src/main/scala/time_statists/MinMaxPriceFunc.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETL/ETL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ETL/ETL.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,19 +71,6 @@
       <recent name="E:\WorkSpace\InterviewProject\source\BitcoinAnalysis\ETL\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -108,7 +83,9 @@
       <workItem from="1624343334694" duration="861000" />
       <workItem from="1624702665000" duration="5050000" />
       <workItem from="1624752915317" duration="607000" />
-      <workItem from="1624780665410" duration="2285000" />
+      <workItem from="1624780665410" duration="2475000" />
+      <workItem from="1624840368390" duration="103000" />
+      <workItem from="1624840490897" duration="307000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1624336325383</created>
@@ -145,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624718850284</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update RealtimeAnalysis Module">
+      <created>1624839932648</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1624839932648</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,7 +152,8 @@
     <MESSAGE value="add photo" />
     <MESSAGE value="update README.md" />
     <MESSAGE value="update ETL Module" />
-    <option name="LAST_COMMIT_MESSAGE" value="update ETL Module" />
+    <MESSAGE value="update RealtimeAnalysis Module" />
+    <option name="LAST_COMMIT_MESSAGE" value="update RealtimeAnalysis Module" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
