@@ -582,14 +582,8 @@ class IncreWarning(interval: Long) extends KeyedProcessFunction[K, I, O] {
 [^3]:https://en.wikipedia.org/wiki/Kaggle
 [^4]:https://www.kaggle.com/mczielinski/bitcoin-historical-data/discussion/34103
 
-## 结束语
+## 总结
 
 由于篇幅原因，本文档只是对其中的部分指标进行了简要的描述，整个项目中还有更多更细致的指标可以描述。由于时间仓促文档中不免会出现不足，还望多批评指正。
-
-
-
-## TODO🔔🔔🔔:
-- [ ] ...
-
 
 
